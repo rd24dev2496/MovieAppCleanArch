@@ -5,6 +5,7 @@ import android.app.Application
 import com.example.movieappcleanarchitecture.common.Endpoint.THE_MOVIE_URL
 import com.example.movieappcleanarchitecture.common.Query.API_KEY_VALUE
 import com.example.movieappcleanarchitecture.dagger.application.AppModule
+import com.example.movieappcleanarchitecture.dagger.application.DaggerMainComponent
 import com.example.movieappcleanarchitecture.dagger.application.MainComponent
 import com.example.movieappcleanarchitecture.dagger.data.DataModule
 import com.example.movieappcleanarchitecture.dagger.details.MovieDetailsModule
@@ -30,11 +31,11 @@ class MovieApplication : Application()//, HasActivityInjector
     }
 
     private fun initDependencies() {
-/*        mainComponent = DaggerMainComponent.builder()
+        mainComponent = DaggerMainComponent.builder()
                 .appModule(AppModule(applicationContext))
                 .networkModule(NetworkModule(THE_MOVIE_URL, API_KEY_VALUE))
                 .dataModule(DataModule())
-                .build()*/
+                .build()
 
 
 

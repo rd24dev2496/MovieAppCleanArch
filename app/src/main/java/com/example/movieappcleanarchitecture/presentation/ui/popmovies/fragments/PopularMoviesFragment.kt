@@ -1,5 +1,6 @@
 package com.example.movieappcleanarchitecture.presentation.ui.popmovies.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.movieappcleanarchitecture.MovieApplication
 import com.example.movieappcleanarchitecture.R
 import com.example.movieappcleanarchitecture.base.BaseFragment
+import com.example.movieappcleanarchitecture.presentation.ui.detail.MovieDetailsActivity
 import kotlinx.android.synthetic.main.fragment_movie_list.*
 import javax.inject.Inject
 
@@ -66,10 +68,9 @@ class MovieListFragment : BaseFragment() {
         popularMoviesAdapter = PopularMoviesAdapter { movie, view ->
 
             navigateToMovieDetailsScreen(movie)
-/*
             val i = Intent(context, MovieDetailsActivity::class.java)
             i.putExtra(MovieDetailsActivity.MOVIE_ID, movie.id)
-            startActivity(i);*/
+            startActivity(i);
 
         }
         recyclerView = popular_movies_recyclerview
@@ -79,7 +80,7 @@ class MovieListFragment : BaseFragment() {
 
 
     private fun initViewModel() {
-  //      viewModel = ViewModelProviders.of(this, factory).get(PopularMoviesViewModel::class.java)
+        viewModel = ViewModelProviders.of(this, factory).get(PopularMoviesViewModel::class.java)
 
     }
     override fun onDestroy() {
