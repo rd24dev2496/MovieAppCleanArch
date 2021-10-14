@@ -42,9 +42,9 @@ class MovieDetailsViewModel (private val getMovieDetails: GetMovieDetails,
                         .zipWith(checkFavoriteStatus.check(movieId),
                                 BiFunction<Movie, Boolean, Movie> {
                                     movie, isFavorite ->
-                            movie.isFavorite = isFavorite
-                            return@BiFunction movie
-                        })
+                                    movie.isFavorite = isFavorite
+                                    return@BiFunction movie
+                                })
                         .subscribe(
                                 {
                                     onMovieDetailsReceived(it) },
@@ -77,8 +77,6 @@ class MovieDetailsViewModel (private val getMovieDetails: GetMovieDetails,
     private fun removeFavorite(movieEntity: MovieEntity): Observable<Boolean> {
         return removeFavoriteMovie.remove(movieEntity)
     }
-
-
     fun favoriteButtonClicked() {
         addDisposable(checkFavoriteStatus.check(movieId).flatMap {
             when (it) {
@@ -95,6 +93,4 @@ class MovieDetailsViewModel (private val getMovieDetails: GetMovieDetails,
             errorState.value = it
         }))
     }
-
-
 }

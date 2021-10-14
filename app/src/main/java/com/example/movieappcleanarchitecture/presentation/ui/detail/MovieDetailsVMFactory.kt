@@ -10,13 +10,13 @@ import com.example.movieappcleanarchitecture.domain.usecases.RemoveFavoriteMovie
 import com.example.movieappcleanarchitecture.domain.usecases.SaveFavoriteMovie
 import com.example.movieappcleanarchitecture.presentation.entities.Movie
 
+
 class MovieDetailsVMFactory(
-    private val getMovieDetails: GetMovieDetails,
-    private val saveFavoriteMovie: SaveFavoriteMovie,
-    private val removeFavoriteMovie: RemoveFavoriteMovie,
-    private val checkFavoriteStatus: CheckFavoriteStatus,
-    private val mapper: Mapper<MovieEntity, Movie>
-) : ViewModelProvider.Factory {
+        private val getMovieDetails: GetMovieDetails,
+        private val saveFavoriteMovie: SaveFavoriteMovie,
+        private val removeFavoriteMovie: RemoveFavoriteMovie,
+        private val checkFavoriteStatus: CheckFavoriteStatus,
+        private val mapper: Mapper<MovieEntity, Movie>) : ViewModelProvider.Factory {
 
     var movieId: Int = -1
 

@@ -117,11 +117,5 @@
             android:text="2018-08-09 (Released)"
 
             />
-
-
     </LinearLayout>
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

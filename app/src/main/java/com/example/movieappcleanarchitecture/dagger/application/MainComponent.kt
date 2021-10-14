@@ -19,14 +19,8 @@ const val SCHEDULER_IO = "io"
 @Component(modules = [
     (AppModule::class),
     (NetworkModule::class)
-,    (DataModule::class)
-    ,(AndroidSupportInjectionModule::class)
-
-    /*
-    ,(MovieListFragmentModule::class)
-,(ViewModelModule::class::class)
-*/
-
+     ,(DataModule::class)
+     ,(AndroidSupportInjectionModule::class)
 ])
 
 interface MainComponent {

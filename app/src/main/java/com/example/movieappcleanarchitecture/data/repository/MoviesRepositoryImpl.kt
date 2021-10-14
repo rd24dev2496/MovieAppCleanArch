@@ -11,10 +11,7 @@ import com.example.movieappcleanarchitecture.domain.entities.MovieEntity
 import com.example.movieappcleanarchitecture.domain.entities.Optional
 import io.reactivex.Observable
 
-class MoviesRepositoryImpl (api: Api,
-                            private val cache: MoviesCache,
-                            movieDataMapper: Mapper<MovieData, MovieEntity>,
-                            detailedDataMapper: Mapper<DetailsData, MovieEntity>
+class MoviesRepositoryImpl (api: Api, private val cache: MoviesCache, movieDataMapper: Mapper<MovieData, MovieEntity>, detailedDataMapper: Mapper<DetailsData, MovieEntity>
 ) : MoviesRepository {
 
     private val memoryDataStore: MoviesDataStore

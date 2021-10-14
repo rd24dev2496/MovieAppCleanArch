@@ -1,8 +1,6 @@
 package com.example.movieappcleanarchitecture.common
 
 import com.example.movieappcleanarchitecture.BuildConfig
-import com.example.movieappcleanarchitecture.BuildConfig.THE_MOVIE_API_KEY
-import com.example.movieappcleanarchitecture.BuildConfig.THE_MOVIE_API_KEY
 
 
 object Endpoint {

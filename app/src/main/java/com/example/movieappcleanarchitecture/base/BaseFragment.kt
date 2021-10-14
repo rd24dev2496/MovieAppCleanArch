@@ -8,17 +8,14 @@ import com.example.movieappcleanarchitecture.presentation.ui.detail.MovieDetails
 
 
 open class BaseFragment: Fragment() {
-
     @SuppressLint("NewApi")
     protected fun navigateToMovieDetailsScreen(movie: Movie) {
         var activityOptions: ActivityOptions? = null
-
         startActivity(
             MovieDetailsActivity.newIntent(
                 context!!,
                 movie.id,
                 movie.posterPath), activityOptions?.toBundle())
-
         activity?.overridePendingTransition(0, 0)
     }
 }
